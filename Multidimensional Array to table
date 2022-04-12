@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Array To Table</title>
+    <style>
+        table, tr, td {
+            border : 2px solid red;
+            width  : 400px;
+            height: 30px;
+            text-align: center
+        }
+        td{
+             background-color: #583;
+             border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <?php
+
+$childs = array(
+        array("child",  "eag"  ,   "length" ,   "weight" ),
+        array("nader",   "4"   ,     "95"   ,     "15"   ),
+        array("sami" ,   "6"   ,    "123"   ,     "29"   ),
+        array("jaber",   "2"   ,     "71"   ,     "12"   ),
+        array("maher",   "5"   ,    "105"   ,     "26"   ),
+        array("musa" ,   "3"   ,     "91"   ,     "18"   )
+);
+
+function childstable($childs = array()) {
+$x = count ($childs);
+$j = 4; //The number of indexes   in the inner matrix.
+echo "<table>";
+
+for($j = 0 ;$j < 4 ; $j++) {
+    echo "<tr>";
+
+    for($i = 0 ;$i < $x ; $i++) {
+
+        echo "<td>" . $childs[$i][$j] . "</td>";
+
+ } 
+echo "</tr>";
+}
+
+echo "</table>";
+};
+
+echo childstable($childs);
+/* 
+echo "<pre>";
+print_r($childs);
+echo "</pre>";
+*/
+?>
+</body>
+</html>
